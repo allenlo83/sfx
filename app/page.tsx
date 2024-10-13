@@ -1,5 +1,8 @@
 import Image from "next/image";
-import Userform from "@/components/Userform"
+import dynamic from 'next/dynamic';
+
+const Userform = dynamic(() => import('@/components/Userform'), { ssr: false });
+
 export default function Home() {
   return (
     <div>
